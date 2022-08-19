@@ -16,7 +16,7 @@ const breakpoints = createBreakpoints({
   xl: '80em',
 })
 
-const theme = extendTheme({
+export const theme = extendTheme({
   colors: {
     black: '#16161D',
     primary: {
@@ -27,5 +27,3 @@ const theme = extendTheme({
   breakpoints,
   config,
 })
-
-export default theme
