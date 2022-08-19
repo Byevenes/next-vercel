@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Navbar } from '../components/Navbar'
 import styles from '../styles/Home.module.css'
+import { Navbar } from '../components/Navbar';
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,8 +15,8 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Ir a <Link href={'/about'}>
-            <a>About</a>
+          Ir a <Link href={'/'}>
+            <a>Home</a>
           </Link>
         </h1>
 
@@ -29,4 +29,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default About
