@@ -1,15 +1,19 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
 import { MainLayout } from '../components/layouts/MainLayout'
-import { theme } from '../theme'
+import { theme } from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  console.log(theme.config);
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      <ColorModeProvider
+        options={theme.config}>
+        <MainLayout>
+          <Component {...pageProps} />
+        </MainLayout>
+      </ColorModeProvider>
     </ChakraProvider>
   )
 }
